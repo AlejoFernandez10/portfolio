@@ -10,7 +10,7 @@ export default function Page() {
   return (
 
    <main className="main-container min-h-[100vh]  w-full flex flex-col items-center justify-center ">
-    <Image width={1020} height={1080} src={bg} priority={true} alt=" background" className="w-auto h-auto top-[-50px]  fixed" />
+    <Image width={1920} height={1080} src={bg} priority={true} alt="background" className="w-[100%] min-h-[120vh] top-[-50px]  object-cover   fixed" />
 
      <Home />
 

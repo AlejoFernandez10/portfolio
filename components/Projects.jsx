@@ -68,7 +68,7 @@ const Projects = () => {
     {
       title:"Coffee-shop",
       img:coffeeShopBanner,
-      description:`This is a coffe-shop app . The user can create their custom order and add it to the cart. Different 'Precreated' kits can also be viewed and added to the cart.`,
+      description:`This is a coffe-shop application . The user can create their custom order and add it to the cart. Different 'Precreated' kits can also be viewed and added to the cart. Form functional using php`,
       techs:[
         
         {url:""},
@@ -81,7 +81,7 @@ const Projects = () => {
 
   return (
 
-    <section className='min-h-[100vh] flex flex-col items-center w-full bg-[#1F1D2B] relative z-100'>
+    <section className='min-h-[100vh] flex flex-col items-center   w-full bg-[#1F1D2B] relative z-100'>
 
 
       <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[30%] opacity-40  absolute left-[-200px] top-20   z-0   ' />
@@ -90,12 +90,12 @@ const Projects = () => {
       
       <div className='w-full max-w-[1200px] flex flex-col justify-center items-center'>
 
-        <div className='w-full max-w-[850px] m-auto'>
+        <div className='w-[90%] max-w-[850px] m-auto '>
 
-        <h2 className='text-gray-50 text-4xl text-start m-auto mt-[100px] mb-[120px]'>Projects</h2>
+        <h2 className='text-gray-50 text-3xl text-start m-auto mt-[100px] mb-[60px] ml-5'>Projects</h2>
         </div>
 
-        <div className='w-full max-w-[1000px] flex flex-col gap-20 items-center justify-center '>
+        <div className='w-[90%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '>
 
         {data.map((project)=>(
 
