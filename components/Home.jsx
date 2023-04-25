@@ -14,7 +14,7 @@ import '../app/globals.css'
 
 import { motion } from 'framer-motion'
 import TruckAnimation from './TruckAnimation'
-
+import bg from '../app/assets/bg.svg'
 
 const Home = () => {
   const [loader, setLoader] = useState(true)
@@ -37,13 +37,14 @@ const Home = () => {
       
   
   <section className="w-full max-w-[1100px] h-[100vh]  flex flex-col-reverse sm:flex-row-reverse place-content-center justify-center items-center z-40  p-4 ">
+  <Image width={1920} height={1080} src={bg} priority={true} alt="background" className="w-[100%] min-h-[120vh] top-[-50px]  object-cover z-0  fixed" />
   
     <motion.div initial={{y:30}} animate={{y:-30}} transition={{duration:4, repeat:Infinity}}   className='relative flex justify-center items-center transition-all sm:pl-5'>
       
-        <Image width={190} height={180} priority={true} alt='Image from my LinkedIn profile' src={myPic} className='h-auto w-auto  relative  rounded-full z-50 mr-10  mb-4 bottom-3 sm:h-[180px] sm:w-[200px] md:h-[230px] md:w-[250px]' />
+        <Image width={190} height={180} priority alt='Image from my LinkedIn profile' src={myPic} className=' w-auto  relative  rounded-full z-50  h-[150px] sm:mr-10  mb-4 bottom-3 sm:h-[180px] sm:w-[200px] md:h-[230px] md:w-[250px]' />
     </motion.div>
 
-    <div className='ml-8 mb-16 w-[100%] max-w-[300px] sm:max-w-[100%] sm:ml-10 md:ml-0 lg:pr-20'>      
+    <div className='ml-8 mb-16 w-[100%] z-10 max-w-[300px] sm:max-w-[100%] sm:ml-10  lg:pr-20'>      
 
       <span className='text-[13px] text-[#9333EA] font-medium leading-none sm:text-[15px] md:text-[17px]'>Hi! My name is</span>
        <h1 className='text-[35px] mt-0.5  text-[#eee] font-semibold leading-none sm:text-[45px] md:text-[50px] lg:text-[60px] '>Alejo Fernandez</h1>

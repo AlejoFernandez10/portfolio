@@ -46,7 +46,7 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between sm:px-10">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between sm:px-16">
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden"

@@ -102,8 +102,10 @@ body {
   background-size: 80px 70px, 30px 50px, 30px 30px;
   background-position: 0 0, 80px 20px, 100px 40px;
 
-  animation: dropScroll 6s ease-in 1;
+  animation: dropScroll 5s ease-in 1;
 }
+
+
 .truckAnimation:after {
   content: "";
   position: absolute;
@@ -158,7 +160,7 @@ body {
     transform: translateX(0%);
   }
   100%{
-    transform: translateX(90vw);
+    transform: translateX(calc(100vw - 130px));
     
   }
 }
@@ -167,13 +169,22 @@ body {
 /* SCROLL DOWN DISPLAYED */
 
 .scrollDown {
-  width: 38px;
-  height: 58px;
+  width: 28px;
+  height: 48px;
   box-sizing: border-box;
   border: 2px solid #fff;
   
   border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
 }
+
+@media screen and (min-width: 570px) {
+  
+  .scrollDown{
+    width: 38px;
+    height: 58px;
+  }
+}
+
 
 .scrollDown::before {
   content: '';

@@ -12,11 +12,11 @@ const TruckAnimation = () => {
 
   setTimeout(()=>{
     setTruckDisplay(false)
-  }, 5700)
+  }, 4700)
 
   setTimeout(()=>{
     setScrollDisplay(true)
-  }, 4000)
+  }, 3500)
 
   return (
     <>

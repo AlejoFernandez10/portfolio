@@ -26,10 +26,10 @@ const AboutMe = () => {
   return (
     <section className='about-me min-h-[90vh] relative w-full flex justify-center z-50 bg-[#262737] pt-14' id='aboutme' >
 
-      <div className='w-full max-w-[500px] md:max-w-[700px] z-40 p-4 pt-20 lg:max-w-[1000px]  '>
+      <div className='w-full max-w-[500px] md:max-w-[700px] z-40 p-4 pt-20 lg:max-w-[850px]  '>
         <h4 className='text-white text-3xl lg:text-4xl mb-5 font-semibold flex relative '> About Me <Image width={30} height={15} alt='triangleDesign' src={triangle} className=' max-h-[30px] relative bottom-[-6px] left-[10px]' /></h4>
 
-          <p className='text-gray-400 text-sm font-semibold lg:w-[75%] lg:text-[15px]'>
+          <p className='text-gray-400 text-sm font-semibold lg:w-[90%] lg:text-[15px]'>
           My name is Alejo Fernandez, I am a 20 year old <span className='text-[#9333EA]'>Front-end Developer</span>  based in Buenos Aires, Argentina. 
           I have been studying frontend development for a year now, and my objective is to become the best possible version of myself, so there is still a long road to walk.
 
@@ -39,7 +39,7 @@ const AboutMe = () => {
             <h5 className='text-gray-100 text-2xl mb-12 mt-20 flex items-end relative '>My Stack <Image width={25} height={10} alt='triangleDesign' src={triangle} className=' relative  bottom-[5px] left-[10px]' /> </h5>
 
             {/* MY STACK */}
-          <div className=' flex gap-7 flex-wrap lg:w-[75%]'>
+          <div className=' flex gap-7 flex-wrap lg:w-[90%]'>
 
 
             <div className='flex flex-col justify-center '>
@@ -106,11 +106,11 @@ const AboutMe = () => {
             <div className='w-full max-w-[1000px] flex flex-col gap-10 sm:flex-row md:gap-20 lg:gap-[120px]'>
 
               <div>
-                  <span className='text-gray-200 font-semibold text-lg ml-2 border-b-[2px] border-gray-400'>
+                  <span className='text-gray-200 font-semibold text-lg ml-2 '>
                     CoderHouse
                   </span>
 
-                  <ul className='border-l-[2px] border-[#9333EA] mt-5 pl-1.5 flex flex-col gap-2  md:mt-10'>
+                  <ul className='border-l-[2px] border-[#9333EA] mt-5 pl-1.5 flex flex-col gap-2  '>
                     <li className='flex whitespace-nowrap items-center text-gray-300 text-sm  md:text-[15px]'><BsDot className='text-lg' />  Front end Web Developer with React</li>
                     <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/>  React Js</li>
                     <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/> Javascript </li>
@@ -120,10 +120,10 @@ const AboutMe = () => {
               </div>
 
               <div>
-                  <span className='text-gray-200 font-semibold text-lg ml-2 border-b-[2px] border-gray-400'>
+                  <span className='text-gray-200 font-semibold text-lg ml-2'>
                     Educacion IT
                   </span>
-                  <ul className='border-l-[2px] border-[#9333EA] mt-5 pl-1.5 flex flex-col gap-2 md:mt-10' >
+                  <ul className='border-l-[2px] border-[#9333EA] mt-5 pl-1.5 flex flex-col gap-2 ' >
                     <li className='flex whitespace-nowrap items-center text-gray-300 text-sm md:text-[15px]'><BsDot className='text-lg' /> Javascript Advanced Developer</li>
                     <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/> Bootstrap </li>
                     <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/>  Sass & Less</li>

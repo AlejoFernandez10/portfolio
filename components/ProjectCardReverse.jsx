@@ -3,6 +3,13 @@ import Image from 'next/image'
 
 import {RxRocket} from 'react-icons/rx'
 import {AiOutlineGithub} from 'react-icons/ai'
+import {FaReact} from 'react-icons/fa'
+import {SiNextdotjs, SiSass} from 'react-icons/si'
+import {SiJavascript} from 'react-icons/si'
+import {FaSass} from 'react-icons/fa'
+import {SiTailwindcss} from 'react-icons/si'
+import {FaBootstrap} from 'react-icons/fa'
+import {SiFirebase} from 'react-icons/si'
 
 const ProjectCardReverse = ({title, img,  description}) => {
   return (
@@ -14,7 +21,7 @@ const ProjectCardReverse = ({title, img,  description}) => {
 
     <div>
     <div className='flex w-full justify-between mt-5 md:w-[80%]'>
-      <h3 className='text-white ml-1   text-lg font-medium z-50'>{title} </h3>
+      <h3 className='text-white ml-1   text-lg font-medium z-50 lg:text-xl'>{title} </h3>
 
       <div className=' pb-10 self-start ml-1 flex gap-4 '>
         <a href="" className='flex flex-col text-xs text-[#9333EA]'><AiOutlineGithub  className='text-[24px]'/></a>
@@ -22,9 +29,33 @@ const ProjectCardReverse = ({title, img,  description}) => {
       </div>
     </div> 
 
-      <p className='text-gray-300 text-[14px] self-center pb-4 z-50 w-[100%] md:w-[80%]'>{description} </p>
+      <p className='text-gray-300 text-[14px] self-center  z-50 w-[100%] md:w-[80%]'>{description} </p>
 
-      <h4 className='text-gray-100 self-start ml-1 font-semibold'>Techs used:</h4>
+      <div className='flex w-full justify-between items-start  mt-5 md:w-[80%]'>
+       <h4 className='text-gray-100 self-start ml-1 font-semibold'>Techs used:</h4>
+
+        <div className='flex gap-3'>
+
+        {title === 'YourResto' &&
+        <>
+          <SiNextdotjs className='text-[27px]' />
+          <FaReact className='text-[27px] text-cyan-400'/>
+          <SiTailwindcss className='text-[27px] text-cyan-400' />
+        </>
+
+        }
+
+        {title === 'Gym Site' &&
+        <>
+          <SiJavascript className='text-[27px] text-yellow-400' />
+          <FaSass className='text-[27px] text-pink-600'/>
+          <FaBootstrap className='text-[27px] text-purple-600' />
+        </>
+
+        }    
+        </div>
+
+      </div>
 
     </div>
 

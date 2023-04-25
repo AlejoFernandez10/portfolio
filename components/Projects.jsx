@@ -1,19 +1,19 @@
+
 import React from 'react'
 import lightBoxDesign from '../app/assets/lightBoxDesign.png'
 import Image from 'next/image'
-
-
 import twentydevBanner from '../app/assets/projects/twentydev.png'
-
-
+import restoAppBanner from '../app/assets/projects/restaurantapp.png'
 import ecommerceBanner from '../app/assets/projects/ecommerce.png'
-
 import gymSiteBanner from '../app/assets/projects/gymSite.png'
-
 import coffeeShopBanner from '../app/assets/projects/coffee-shop.png'
-
 import ProjectCardReverse from './ProjectCardReverse'
 import ProjectCard from './ProjectCard'
+import triangle from '../app/assets/triangle.png'
+
+
+
+
 
 
 const Projects = () => {
@@ -23,6 +23,7 @@ const Projects = () => {
       title:"TwentyDev",
       img:twentydevBanner,
       description:"TwentyDev is my personal brand. It has the objective of selling web templates and websites developed by me.    I like to think about it as a win-win, because if i don’t sell any website or template, i would still be gaining experience by creating solid projects.  ",
+      
       techs:[
   
         {url:""},
@@ -32,7 +33,7 @@ const Projects = () => {
     },
     {
       title:"YourResto",
-      img:coffeeShopBanner,
+      img:restoAppBanner,
       description:"This is a restaurant app. I developed it with the objective of learning Next JS. Users can filter and navigate  through a variety of products, see their details ,add them to cart, and see the status once they buy it. It will soonly have in-app notifications.",
       techs:[
   
@@ -81,7 +82,7 @@ const Projects = () => {
 
   return (
 
-    <section className='min-h-[100vh] flex flex-col items-center   w-full bg-[#1F1D2B] relative z-100' id='projects' >
+    <section className='min-h-[100vh] flex flex-col items-center z-50  w-full bg-[#1F1D2B] relative z-100' id='projects' >
 
 
       <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[30%] opacity-40  absolute left-[-200px] top-20   z-0   ' />
@@ -93,7 +94,7 @@ const Projects = () => {
 
         <div className='w-[90%] max-w-[850px] m-auto '>
 
-        <h2 className='text-gray-50 text-3xl text-start m-auto mt-[100px] mb-[60px] ml-5 lg:text-[40px]'>Projects</h2>
+        <h2 className='text-gray-50 text-3xl text-start m-auto mt-[100px] mb-[60px] ml-3 lg:text-[40px] flex'>Projects <Image width={30} height={15} alt='triangleDesign' src={triangle} className=' max-h-[30px] relative bottom-[-6px] left-[10px]' /></h2>
         </div>
 
         <div className='w-[90%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '>
@@ -102,9 +103,9 @@ const Projects = () => {
 
         (project.reverse ?
 
-         <ProjectCardReverse key={project.title} title={project.title} description={project.description} img={project.img} />
+         <ProjectCardReverse key={project.title} title={project.title} description={project.description} img={project.img}  />
           :
-          <ProjectCard key={project.title} title={project.title} description={project.description} img={project.img} />
+          <ProjectCard key={project.title} title={project.title} description={project.description} img={project.img} video={project.video} />
         )
           
 
