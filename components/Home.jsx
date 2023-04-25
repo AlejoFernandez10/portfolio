@@ -37,7 +37,7 @@ const Home = () => {
       
   
   <section className="w-full max-w-[1100px] h-[100vh]  flex flex-col-reverse sm:flex-row-reverse place-content-center justify-center items-center z-40  p-4 ">
-  <Image width={1920} height={1080} src={bg} priority={true} alt="background" className="w-[100%] min-h-[120vh] top-[-50px]  object-cover z-0  fixed" />
+  <Image width={1920} height={1080} src={bg} priority alt="background" className="w-[100%] min-h-[120vh] top-[-50px]  object-cover z-0  fixed" />
   
     <motion.div initial={{y:30}} animate={{y:-30}} transition={{duration:4, repeat:Infinity}}   className='relative flex justify-center items-center transition-all sm:pl-5'>
       

@@ -147,7 +147,7 @@ const AboutMe = () => {
       </div>
 
 
-      <Image width={1920} height={1080} src={darkBox} priority={true} alt="boxDesign" className="w-auto min-h-[500px]  bottom-20 right-0 z-0 object-cover  absolute" />
+      <Image width={400} height={400} src={darkBox} priority={true} alt="boxDesign" className="w-auto min-h-[500px]  bottom-20 right-0 z-0 object-cover  absolute" />
     </section>
   )
 }

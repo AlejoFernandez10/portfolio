@@ -1,6 +1,7 @@
 
 import React from 'react'
 import lightBoxDesign from '../app/assets/lightBoxDesign.png'
+import lightBoxDesign2 from '../app/assets/lightBoxDesign2.png'
 import Image from 'next/image'
 import twentydevBanner from '../app/assets/projects/twentydev.png'
 import restoAppBanner from '../app/assets/projects/restaurantapp.png'
@@ -85,7 +86,7 @@ const Projects = () => {
     <section className='min-h-[100vh] flex flex-col items-center z-50  w-full bg-[#1F1D2B] relative z-100' id='projects' >
 
 
-      <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[30%] opacity-40  absolute left-[-200px] top-20   z-0   ' />
+      <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[25%] opacity-80  absolute left-0 top-20   z-0   ' />
 
       <div className='bg-[#9333EA] left-[-100px] top-[50%] blur-[80px] h-[120px] w-[120px] md:h-[150px] md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[130px] absolute xl:h-[300px] xl:w-[250px] xl:blur-[200px]'></div>
       
@@ -111,8 +112,8 @@ const Projects = () => {
 
         ))}
 
-        <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[30%] opacity-40  absolute right-[0px] top-[40%]   z-0   ' />
-        <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[30%] opacity-40  absolute left-[-150px] bottom-0   z-0   ' />
+        <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign2} className=' w-[30%] opacity-80  absolute right-[0px] top-[40%]   z-0   ' />
+        <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[25%] opacity-80 absolute left-0 bottom-0   z-0   ' />
         </div>
 
       </div>
