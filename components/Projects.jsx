@@ -33,7 +33,7 @@ const Projects = () => {
     },
     {
       title:"YourResto",
-      img:yourrestoBanner,
+      img:coffeeShopBanner,
       description:"This is a restaurant app. I developed it with the objective of learning Next JS. Users can filter and navigate  through a variety of products, see their details ,add them to cart, and see the status once they buy it. It will soonly have in-app notifications.",
       techs:[
   
