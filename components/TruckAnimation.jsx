@@ -25,7 +25,7 @@ const TruckAnimation = () => {
       {scrollDisplay && 
       <>
         <span class="scrollDown absolute bottom-14 z-40"></span>
-        <span className='absolute bottom-7 text-gray-100 font-medium z-40 text-sm'>Scroll</span>
+        <span className='absolute bottom-7 text-gray-100 font-medium z-40 text-sm'>Scroll down</span>
       </>
       }
     </>

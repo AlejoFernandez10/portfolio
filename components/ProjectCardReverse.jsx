@@ -8,7 +8,7 @@ const ProjectCardReverse = ({title, img,  description}) => {
   return (
     <div  className='flex w-[100%] max-w-[350px] md:max-w-[750px] lg:max-w-[850px] md:gap-x-5 flex-col md:flex-row-reverse m-auto  justify-center items-center'>
 
-    <div layoutId={title} className='m-auto pb-5 w-full' >
+    <div  className='m-auto pb-5 w-full' >
       <Image width={1920} height={1080} alt={description} src={img} className='w-full min-w-[300px] lg:min-w-[370px]  hover:scale-105 transition-all duration-200 hover:shadow-2xl' />
     </div>
 

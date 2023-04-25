@@ -11,9 +11,9 @@ import { useContext, useState } from 'react'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'Projects', href: '#', current: true },
-  { name: 'About me', href: '#', current: true },
-  { name: 'Contact', href: '#', current: true },
+  { name: 'Projects', href: '#projects', current: true },
+  { name: 'About me', href: '#aboutme', current: true },
+  { name: 'Contact', href: '#contact', current: true },
 ]
 
 function classNames(...classes) {

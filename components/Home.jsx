@@ -50,8 +50,8 @@ const Home = () => {
       <p className='mt-5 text-[#bbb]    w-[89%] text-sm sm:w-[65%] sm:text-[16px] md:text-[18px]'>Im a Front-end Web Developer looking for his first work experience.</p>
   
       <div className='pt-8'>
-        <a href='#' className=" text-sm border-[1px] font-regular border-[#9333EA] bg-[#9333EA] py-[9px] px-9 mr-3 rounded-[5px] text-white transition-all duration-200 hover:opacity-80 sm:text-base lg:text-lg">Projects</a>
-        <a href='#' className=" text-sm border-[1px] font-regular border-[#9333EA] py-[9px] px-6 rounded-[5px] text-white transition-all duration-200 hover:bg-[#9333EA]  sm:text-base lg:text-lg">Lets connect</a>
+        <a href='#projects' className=" text-sm border-[1px] font-regular border-[#9333EA] bg-[#9333EA] py-[9px] px-9 mr-3 rounded-[5px] text-white transition-all duration-200 hover:opacity-80 sm:text-base lg:text-lg">Projects</a>
+        <a href='#contact' className=" text-sm border-[1px] font-regular border-[#9333EA] py-[9px] px-6 rounded-[5px] text-white transition-all duration-200 hover:bg-[#9333EA]  sm:text-base lg:text-lg">Lets connect</a>
       </div>
     </div>
   

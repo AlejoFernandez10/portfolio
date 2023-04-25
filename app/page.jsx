@@ -4,8 +4,14 @@ import Home from "@/components/Home"
 import Projects from "@/components/Projects"
 import bg from './assets/bg.svg'
 import Image from "next/image"
-export default function Page() {
+import AboutMe from "@/components/AboutMe"
+import Contact from "@/components/Contact"
 
+
+
+
+
+export default function Page() {
 
   return (
 
@@ -15,6 +21,10 @@ export default function Page() {
      <Home />
 
      <Projects />
+
+     <AboutMe />
+
+     <Contact />
     
     </main>
   )

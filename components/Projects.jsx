@@ -81,10 +81,11 @@ const Projects = () => {
 
   return (
 
-    <section className='min-h-[100vh] flex flex-col items-center   w-full bg-[#1F1D2B] relative z-100'>
+    <section className='min-h-[100vh] flex flex-col items-center   w-full bg-[#1F1D2B] relative z-100' id='projects' >
 
 
       <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className=' w-[30%] opacity-40  absolute left-[-200px] top-20   z-0   ' />
+
       <div className='bg-[#9333EA] left-[-100px] top-[50%] blur-[80px] h-[120px] w-[120px] md:h-[150px] md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[130px] absolute xl:h-[300px] xl:w-[250px] xl:blur-[200px]'></div>
       
       
@@ -92,7 +93,7 @@ const Projects = () => {
 
         <div className='w-[90%] max-w-[850px] m-auto '>
 
-        <h2 className='text-gray-50 text-3xl text-start m-auto mt-[100px] mb-[60px] ml-5'>Projects</h2>
+        <h2 className='text-gray-50 text-3xl text-start m-auto mt-[100px] mb-[60px] ml-5 lg:text-[40px]'>Projects</h2>
         </div>
 
         <div className='w-[90%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '>
