@@ -5,9 +5,10 @@ import '../app/globals.css'
 import { Disclosure,} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import '../app/globals.css'
-
+import logo from '../app/assets/logo.png'
 import Context from '@/app/context/Context'
 import { useContext, useState } from 'react'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
@@ -46,20 +47,20 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between sm:px-16">
+              <div className="flex flex-1 items-center justify-center sm:items-center sm:justify-between sm:px-[60px] sm:pr-[90px]">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                  <Image width={250} height={120}
+                    className="block   h-20 w-auto lg:hidden"
+                    src={logo}
+                    alt="Portfolio logo"
                   />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                  <Image  width={250} height={120}
+                    className="hidden h-20   w-auto lg:inline"
+                    src={logo}
+                    alt="Portfolio logo"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden  sm:block">
                   <div className="flex ">
                     {navigation.map((item) => (
                       <a
