@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import twentydevBanner from '../app/assets/projects/twentydev.png'
 
-import yourrestoBanner from '../app/assets/projects/yourresto.png'
+
 
 import ecommerceBanner from '../app/assets/projects/ecommerce.png'
 
