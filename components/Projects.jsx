@@ -12,6 +12,7 @@ import ecommerceBanner from '../app/assets/projects/e-commerce.png'
 import gymSiteBanner from '../app/assets/projects/gymSite.png'
 
 import coffeeShopBanner from '../app/assets/projects/coffee-shop.png'
+
 import ProjectCardReverse from './ProjectCardReverse'
 import ProjectCard from './ProjectCard'
 
