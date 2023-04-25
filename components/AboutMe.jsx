@@ -43,57 +43,57 @@ const AboutMe = () => {
 
 
             <div className='flex flex-col justify-center '>
-              <FaReact className='text-[35px] text-cyan-500 ml-2 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm'>React Js</span>
+              <FaReact className='text-[35px] text-cyan-500 ml-1 mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm'>React Js</span>
             </div>
 
             <div className='flex flex-col justify-center '>
-              <SiNextdotjs className='text-[35px]  ml-1 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm'>Next Js</span>
+              <SiNextdotjs className='text-[35px]  ml-1 mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm'>Next Js</span>
             </div>
 
             <div className='flex flex-col justify-center '>
-              <SiJavascript className='text-[35px] text-yellow-400  ml-3 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm'>Javascript</span>
+              <SiJavascript className='text-[35px] text-yellow-400  ml-2 mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm'>Javascript</span>
             </div>
 
             <div className='flex flex-col justify-center '>
-              <FaSass className='text-[35px] text-pink-400  ml-1 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm ml-1'>Scss</span>
+              <FaSass className='text-[35px] text-pink-400   mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm ml-1'>Scss</span>
             </div>  
 
             <div className='flex flex-col justify-center '>
-              <SiFirebase className='text-[35px] text-orange-500  ml-3 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm'>Firebase</span>
+              <SiFirebase className='text-[35px] text-orange-500  ml-1 mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm'>Firebase</span>
             </div> 
             <div className='flex flex-col justify-center '>
-              <SiTailwindcss className='text-[35px] text-cyan-400  ml-3 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm'>Tailwind</span>
-            </div> 
-
-            <div className='flex flex-col justify-center '>
-              <FaBootstrap className='text-[35px] text-purple-600  ml-4 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm'>Bootstrap</span>
+              <SiTailwindcss className='text-[35px] text-cyan-400  ml-1 mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm'>Tailwind</span>
             </div> 
 
             <div className='flex flex-col justify-center '>
-              <FaGitAlt className='text-[35px] text-orange-600  mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm ml-2'>Git</span>
+              <FaBootstrap className='text-[35px] text-purple-600  ml-2 mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm'>Bootstrap</span>
             </div> 
 
             <div className='flex flex-col justify-center '>
-              <AiOutlineGithub className='text-[35px] text-white  ml-1 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm '>Github</span>
+              <FaGitAlt className='text-[35px] text-orange-600  mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm ml-3'>Git</span>
+            </div> 
+
+            <div className='flex flex-col justify-center '>
+              <AiOutlineGithub className='text-[35px] text-white   mb-1.5 lg:text-[45px]'/>
+              <span className='text-gray-400 text-sm '>Github</span>
             </div>
 
             <div className='flex flex-col justify-center '>
               <IoLogoCss3 className='text-[35px] text-blue-700  mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 ml-1.5'>Css</span>
+              <span className='text-gray-400 ml-2.5'>Css</span>
             </div>  
 
             <div className='flex flex-col justify-center '>
               <AiFillHtml5 className='text-[35px] text-orange-600  ml-1 mb-1 lg:text-[45px]'/>
-              <span className='text-gray-300 text-sm ml-2'>Html</span>
+              <span className='text-gray-400 text-sm ml-2.5'>Html</span>
             </div> 
 
 
@@ -125,6 +125,7 @@ const AboutMe = () => {
                   </span>
                   <ul className='border-l-[2px] border-[#9333EA] mt-5 pl-1.5 flex flex-col gap-2 md:mt-10' >
                     <li className='flex whitespace-nowrap items-center text-gray-300 text-sm md:text-[15px]'><BsDot className='text-lg' /> Javascript Advanced Developer</li>
+                    <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/> Bootstrap </li>
                     <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/>  Sass & Less</li>
                     <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/> Object Paradigm introduction </li>
                     <li className='flex items-center text-gray-300 text-sm md:text-[15px]'><BsDot  className='text-lg'/> Javascript from Scratch</li>
@@ -139,14 +140,14 @@ const AboutMe = () => {
 
             {/* MY STUDIES */}
 
-          <div className='mt-20 text-gray-200 text-lg'>
+          <div className='mt-20 text-gray-200 text-lg mb-10'>
             <p className=' font-medium'>Download my cv  <a href="#" className='text-[#9333EA] font-semibold'>here!</a> </p>
           </div>
 
       </div>
 
 
-      <Image width={1920} height={1080} src={darkBox} priority={true} alt="boxDesign" className="w-auto min-h-[500px]  bottom-0 right-0 z-0 object-cover  absolute" />
+      <Image width={1920} height={1080} src={darkBox} priority={true} alt="boxDesign" className="w-auto min-h-[500px]  bottom-20 right-0 z-0 object-cover  absolute" />
     </section>
   )
 }

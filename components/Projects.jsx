@@ -6,7 +6,6 @@ import Image from 'next/image'
 import twentydevBanner from '../app/assets/projects/twentydev.png'
 
 
-
 import ecommerceBanner from '../app/assets/projects/ecommerce.png'
 
 import gymSiteBanner from '../app/assets/projects/gymSite.png'
