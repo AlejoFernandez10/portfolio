@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import twentydevBanner from '../app/assets/projects/twentydev.png'
 
-import yourRestoBanner from '../app/assets/projects/yourresto.png'
+import yourrestoBanner from '../app/assets/projects/yourresto.png'
 
 import ecommerceBanner from '../app/assets/projects/ecommerce.png'
 
@@ -33,7 +33,7 @@ const Projects = () => {
     },
     {
       title:"YourResto",
-      img:yourRestoBanner,
+      img:yourrestoBanner,
       description:"This is a restaurant app. I developed it with the objective of learning Next JS. Users can filter and navigate  through a variety of products, see their details ,add them to cart, and see the status once they buy it. It will soonly have in-app notifications.",
       techs:[
   
