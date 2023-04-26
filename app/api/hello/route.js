@@ -1,3 +1,6 @@
-export async function GET(request) {
-  return new Response('Hello, Next.js!')
+
+export async function POST(request) {
+  const res = await request.json();
+  console.log(res)
+  return new Response(JSON.stringify('Request succesful!'))
 }

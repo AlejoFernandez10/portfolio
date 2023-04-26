@@ -26,7 +26,7 @@ const TruckAnimation = () => {
 
       {scrollDisplay && 
       <>
-        <span class={`scrollDown absolute bottom-14 z-40 border-[2px] ${theme === 'dark' ? 'border-[#fff] before:bg-white' : 'border-gray-800 before:bg-gray-800'} `}></span>
+        <span className={`scrollDown absolute bottom-14 z-40 border-[2px] ${theme === 'dark' ? 'border-[#fff] before:bg-white' : 'border-gray-800 before:bg-gray-800'} `}></span>
         <span className={`absolute bottom-7 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-800'} font-medium z-40 text-sm`}>Scroll down</span>
       </>
       }

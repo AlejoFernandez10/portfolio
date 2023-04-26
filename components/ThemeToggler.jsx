@@ -15,7 +15,7 @@ const toggleTheme = () => {
 return (
   <div className={`relative h-6 w-12 text-white flex flex-col`} >
     <label htmlFor="AcceptConditions" className="absolute h-6 w-12 cursor-pointer" >
-      <input type="checkbox" id="AcceptConditions" className="peer sr-only" onClick={toggleTheme} checked={theme === 'light'} />
+      <input type="checkbox" id="AcceptConditions" className="peer sr-only" onClick={toggleTheme}  />
       <span className="absolute inset-0 w-full rounded-full bg-gray-500 transition peer-checked:bg-purple-500"></span>
       <span className="absolute inset-y-0 start-0 m-1 h-4 w-4 rounded-full  transition-all peer-checked:start-6">{theme === 'dark' ? <BsFillMoonStarsFill /> : <BsFillSunFill />} </span>
     </label>
