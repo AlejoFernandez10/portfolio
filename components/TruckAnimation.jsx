@@ -1,10 +1,12 @@
 'use client'
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import '../app/globals.css'
 
+import Context from '@/app/context/Context'
 
 const TruckAnimation = () => {
 
+  const [theme, setTheme] = useContext(Context)
 
   const [truckDisplay, setTruckDisplay] = useState(true)
   const [scrollDisplay, setScrollDisplay] = useState(false)
@@ -24,8 +26,8 @@ const TruckAnimation = () => {
 
       {scrollDisplay && 
       <>
-        <span class="scrollDown absolute bottom-14 z-40"></span>
-        <span className={'absolute bottom-7 text-gray-100 font-medium z-40 text-sm'}>Scroll down</span>
+        <span class={`scrollDown absolute bottom-14 z-40 border-[2px] ${theme === 'dark' ? 'border-[#fff] before:bg-white' : 'border-gray-800 before:bg-gray-800'} `}></span>
+        <span className={`absolute bottom-7 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-800'} font-medium z-40 text-sm`}>Scroll down</span>
       </>
       }
     </>

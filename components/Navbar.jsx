@@ -9,6 +9,7 @@ import logo from '../app/assets/logo.webp'
 import Context from '@/app/context/Context'
 import { useContext} from 'react'
 import Image from 'next/image'
+import ThemeToggler from './ThemeToggler'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
@@ -74,10 +75,10 @@ export default function Example() {
                     ))}
                   </div>
                 </div>
-                <div>
-                  <button onClick={(e)=> e.preventDefault() & setTheme('light')}  className={'text-white'}>Mode</button>
+                
                   
-                </div>
+                  <ThemeToggler />
+                
               </div>                
               
             </div>

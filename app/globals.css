@@ -172,7 +172,7 @@ body {
   width: 28px;
   height: 48px;
   box-sizing: border-box;
-  border: 2px solid #fff;
+  
   
   border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
 }
@@ -194,7 +194,7 @@ body {
   transform: translate(-50% , 50%);
   width: 10px;
   height: 10px;
-  background: #FFF;
+  
   border-radius: 50%;
   animation: fadeDown 1s ease-out infinite;
 }

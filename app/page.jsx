@@ -2,8 +2,7 @@ import React from "react"
 
 import Home from "@/components/Home"
 import Projects from "@/components/Projects"
-import bg from './assets/bg.svg'
-import Image from "next/image"
+
 import AboutMe from "@/components/AboutMe"
 import Contact from "@/components/Contact"
 

@@ -25,14 +25,14 @@ const AboutMe = () => {
       <div className={'w-full max-w-[500px] md:max-w-[700px] z-40 p-4 pt-20 lg:max-w-[850px]  '}>
         <h4 className={`${theme !== 'dark' ? 'text-[#262737]' : 'text-white'}  text-3xl lg:text-4xl mb-5 font-semibold flex relative `}> About Me <Image width={30} height={15} alt='triangleDesign' src={triangle} className=' max-h-[30px] relative bottom-[-6px] left-[10px]' /></h4>
 
-          <p className={`${theme !== 'dark' ? 'text-[#262737]' : 'text-gray-400'}  text-sm font-semibold lg:w-[90%] lg:text-[15px]`}>
+          <p className={`${theme !== 'dark' ? 'text-[#484959]' : 'text-gray-400'}  text-sm font-semibold lg:w-[90%] lg:text-[15px]`}>
           My name is Alejo Fernandez, I am a 20 year old <span className={'text-[#9333EA]'}>Front-end Developer</span>  based in Buenos Aires, Argentina. 
           I have been studying frontend development for a year now, and my objective is to become the best possible version of myself, so there is still a long road to walk.
 
           I am a very <span className={'text-[#9333EA]'}>disciplined</span> person with a strong personality who loves to put <span className='text-[#9333EA]'>difficult challenges</span> to himself, that is why I improve so fast and why you will never see any calculator app or to-do lists here.
           </p>
 
-            <h5 className={`${theme !== 'dark' ? 'text-[#262737]' : 'text-gray-100'}  text-2xl mb-12 mt-20 flex items-end relative `}>My Stack <Image width={25} height={10} alt='triangleDesign' src={triangle} className=' relative  bottom-[5px] left-[10px]' /> </h5>
+            <h5 className={`${theme !== 'dark' ? 'text-[#262737]' : 'text-gray-100'}  font-medium text-2xl mb-8 mt-20 flex items-end relative `}>My Stack <Image width={25} height={10} alt='triangleDesign' src={triangle} className=' relative  bottom-[5px] left-[10px]' /> </h5>
 
           <MyStack />  
 
@@ -45,7 +45,7 @@ const AboutMe = () => {
       </div>
 
 
-      <Image width={400} height={400} src={darkBox} priority={true} alt="boxDesign" className="w-auto min-h-[500px]  bottom-20 right-0 z-0 object-cover  absolute" />
+      <Image width={400} height={400} src={darkBox} priority={true} alt="boxDesign" className={`w-auto min-h-[500px] ${theme !== 'dark' && 'opacity-30'} bottom-20 right-0 z-0 object-cover  absolute`} />
     </section>
   )
 }
