@@ -12,7 +12,7 @@ import {FaSass} from 'react-icons/fa'
 import {SiTailwindcss} from 'react-icons/si'
 import {FaBootstrap} from 'react-icons/fa'
 import Context from '@/app/context/Context'
-
+import { motion } from 'framer-motion'
 import { useContext } from 'react'
 
 const ProjectCardReverse = ({title, img,  description}) => {
@@ -20,7 +20,7 @@ const ProjectCardReverse = ({title, img,  description}) => {
   const [theme, setTheme] = useContext(Context)
 
   return (
-    <div  className={'flex w-[100%] max-w-[350px] md:max-w-[750px] lg:max-w-[850px] md:gap-x-5 flex-col md:flex-row-reverse m-auto  justify-center items-center'}>
+    <motion.div initial={{y:150}} whileInView={{y:0}} transition={{ duration: 0.5}} viewport={{once:true}}  className={'flex w-[100%] max-w-[350px] md:max-w-[750px] lg:max-w-[850px] md:gap-x-5 flex-col md:flex-row-reverse m-auto  justify-center items-center'}>
 
     <div  className={'m-auto pb-5 w-full'} >
       <Image width={1920} height={1080} alt={description} src={img} className={'w-full min-w-[300px] lg:min-w-[370px]  hover:scale-105 transition-all duration-200 hover:shadow-2xl'} />
@@ -68,7 +68,7 @@ const ProjectCardReverse = ({title, img,  description}) => {
 
     
 
-  </div>
+  </motion.div>
   )
 }
 

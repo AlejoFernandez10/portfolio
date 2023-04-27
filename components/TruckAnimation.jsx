@@ -1,6 +1,8 @@
 'use client'
 import React, {useState, useContext} from 'react'
+
 import '../app/globals.css'
+import { ChakraProvider } from '@chakra-ui/react'
 
 import Context from '@/app/context/Context'
 
@@ -10,6 +12,7 @@ const TruckAnimation = () => {
 
   const [truckDisplay, setTruckDisplay] = useState(true)
   const [scrollDisplay, setScrollDisplay] = useState(false)
+
 
 
   setTimeout(()=>{

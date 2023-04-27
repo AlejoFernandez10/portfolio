@@ -16,7 +16,7 @@ import Context from '@/app/context/Context'
 import { useContext } from 'react'
 
 import cv from '../public/alejoFernandezcv.pdf'
-
+import { motion } from 'framer-motion'
 
 const AboutMe = () => {
 
@@ -25,7 +25,7 @@ const AboutMe = () => {
   return (
     <section className={`about-me min-h-[90vh] relative w-full flex justify-center z-50 ${theme === 'dark' ? 'bg-[#262737]' : 'bg-gray-50'} pt-14`} id='aboutme' >
 
-      <div className={'w-full max-w-[500px] md:max-w-[700px] z-40 p-4 pt-20 lg:max-w-[850px]  '}>
+      <motion.div initial={{y:150}} whileInView={{y:0}} transition={{ duration: 0.5 }} viewport={{once:true}} className={'w-full max-w-[500px] md:max-w-[700px] z-40 p-4 pt-20 lg:max-w-[850px]  '}>
         <h4 className={`${theme !== 'dark' ? 'text-[#262737]' : 'text-white'}  text-3xl lg:text-4xl mb-5 font-semibold flex relative `}> About Me <Image width={30} height={15} alt='triangleDesign' src={triangle} className=' max-h-[30px] relative bottom-[-6px] left-[10px]' /></h4>
 
           <p className={`${theme !== 'dark' ? 'text-[#484959]' : 'text-gray-400'}  text-sm font-semibold lg:w-[90%] lg:text-[15px]`}>
@@ -45,7 +45,7 @@ const AboutMe = () => {
             <p className={' font-medium'}>Download my cv  <a href={cv} download={true} className={'text-[#9333EA] font-semibold'} >here!</a> </p>
           </div>
 
-      </div>
+      </motion.div>
 
 
       <Image width={400} height={400} src={darkBox} priority={true} alt="boxDesign" className={`w-auto min-h-[500px] ${theme !== 'dark' && 'opacity-30'} bottom-20 right-0 z-0 object-cover  absolute`} />

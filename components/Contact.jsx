@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { ChakraProvider, FormErrorMessage, useToast,FormControl, FormLabel, Input, Textarea, Button } from '@chakra-ui/react'
+import { ChakraProvider, FormErrorMessage, useToast,FormControl, FormLabel, Input, Textarea, Button, CSSReset } from '@chakra-ui/react'
 
 import triangle from '../app/assets/triangle.webp'
 import {AiFillLinkedin} from 'react-icons/ai'
@@ -18,7 +18,7 @@ import { useContext, useState } from 'react'
 import { sendForm } from '@/app/lib/sendFrom'
 
 
-
+import { motion } from 'framer-motion'
 
 
 
@@ -80,7 +80,7 @@ function Contact() {
     <section className={`min-h-[100vh] z-50 flex justify-center  w-full ${theme === 'dark' ? 'bg-[#1F1D2B]' : 'bg-gray-100'}  pt-20`} id='contact'>
 
 
-      <div className={'w-full max-w-[850px] relative flex flex-col items-center justify-between sm:flex-row'}>
+      <motion.div initial={{y:200}} whileInView={{y:0}} transition={{ duration: 0.5 }} viewport={{once:true}} className={'w-full max-w-[850px] relative flex flex-col items-center justify-between sm:flex-row'}>
 
         <div className={'w-full max-w-[400px] flex flex-col justify-center  '}>
 
@@ -170,7 +170,7 @@ function Contact() {
         <div className={'self-center mb-20'}>
           <Image width={1900} height={1500} src={avatar} className={'h-auto w-auto min-h-[380px] max-w-[250px] md:min-h-[500px] md:mr-10 object-cover'} alt='Full body avatar' />
         </div>
-      </div>
+      </motion.div>
 
 
 
