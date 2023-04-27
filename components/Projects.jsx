@@ -27,59 +27,39 @@ const Projects = () => {
       title:"TwentyDev",
       img:twentydevBanner,
       description:"TwentyDev is my personal brand. It has the objective of selling web templates and websites developed by me.    I like to think about it as a win-win, because if i don’t sell any website or template, i would still be gaining experience by creating solid projects.  ",
-      
-      techs:[
-  
-        {url:""},
-        {url:""},
-        {url:""}
-      ]    
+      urlRepo:'https://github.com/AlejoFernandez10/twentydev2.0',
+      urlDeploy:'https://twentydev.com/',      
+         
     },
     {
       title:"YourResto",
       img:restoAppBanner,
       description:"This is a restaurant app. I developed it with the objective of learning Next JS. Users can filter and navigate  through a variety of products, see their details ,add them to cart, and see the status once they buy it. It will soonly have in-app notifications.",
-      techs:[
-  
-        {url:""},
-        {url:""},
-        {url:""}
-      ],
+      urlRepo:'https://github.com/AlejoFernandez10/RestaurantApp',
+      urlDeploy:'https://restaurant-app-six-sigma.vercel.app/',
       reverse:true    
     },
     {
       title:"E-commerce",
       img:ecommerceBanner,
       description:"This is an E-commerce store. Users can navigate through the different products in the store and have the option to add them to their cart. It is also possible to create an account and log in. If the user is logged in, they can access a section that will detail their purchase history in the store. ",
-      techs:[
-  
-        {url:""},
-        {url:""},
-        {url:""}
-      ]    
+      urlRepo:'https://github.com/AlejoFernandez10/e-commerceTemplate',
+      urlDeploy:'https://e-commerce-template-seven.vercel.app/',  
     },
     {
       title:"Gym Site",
       img:gymSiteBanner,
       description:"This is a gym Website. The gym's available activities are displayed along with the dates of the classes for those activities. It has a section for Plans or Memberships which the user can add to their cart. ",
-      techs:[
-  
-        {url:""},
-        {url:""},
-        {url:""}
-      ],
+      urlRepo:'https://github.com/AlejoFernandez10/Gym-template',
+      urlDeploy:'https://gymtemplate.vercel.app/',
       reverse:true       
     },
     {
       title:"Coffee-shop",
       img:coffeeShopBanner,
       description:`This is a coffe-shop application . The user can create their custom order and add it to the cart. Different 'Precreated' kits can also be viewed and added to the cart. Form functional using php`,
-      techs:[
-        
-        {url:""},
-        {url:""},
-        {url:""}
-      ]    
+      urlRepo:'https://github.com/AlejoFernandez10/coffeeShopTemplate',
+      urlDeploy:'https://coffee-shop-template.vercel.app/',   
     }
   ]
 
@@ -87,7 +67,7 @@ const Projects = () => {
 
   return (
 
-    <section className={`min-h-[100vh] flex flex-col items-center z-50  w-full ${theme === 'dark' ? 'bg-[#1F1D2B]': 'bg-gray-100'} relative z-100`} id='projects' >
+    <section className={` flex flex-col items-center z-50  w-full ${theme === 'dark' ? 'bg-[#1F1D2B]': 'bg-gray-100'} relative z-100`} id='projects' >
 
       
 
@@ -109,9 +89,9 @@ const Projects = () => {
 
         (project.reverse ?
 
-         <ProjectCardReverse key={project.title} title={project.title} description={project.description} img={project.img}  />
+         <ProjectCardReverse key={project.title} title={project.title} description={project.description} img={project.img} urlDeploy={project.urlDeploy} urlRepo={project.urlRepo}  />
           :
-          <ProjectCard key={project.title} title={project.title} description={project.description} img={project.img} video={project.video} />
+          <ProjectCard key={project.title} title={project.title} description={project.description} img={project.img}  urlDeploy={project.urlDeploy} urlRepo={project.urlRepo} />
         )
           
 

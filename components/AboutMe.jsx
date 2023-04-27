@@ -23,7 +23,7 @@ const AboutMe = () => {
   const [theme, setTheme] = useContext(Context)
 
   return (
-    <section className={`about-me min-h-[90vh] relative w-full flex justify-center z-50 ${theme === 'dark' ? 'bg-[#262737]' : 'bg-gray-50'} pt-14`} id='aboutme' >
+    <section className={`about-me  relative w-full flex justify-center z-50 ${theme === 'dark' ? 'bg-[#262737]' : 'bg-gray-50'} pt-14`} id='aboutme' >
 
       <motion.div initial={{y:150}} whileInView={{y:0}} transition={{ duration: 0.5 }} viewport={{once:true}} className={'w-full max-w-[500px] md:max-w-[700px] z-40 p-4 pt-20 lg:max-w-[850px]  '}>
         <h4 className={`${theme !== 'dark' ? 'text-[#262737]' : 'text-white'}  text-3xl lg:text-4xl mb-5 font-semibold flex relative `}> About Me <Image width={30} height={15} alt='triangleDesign' src={triangle} className=' max-h-[30px] relative bottom-[-6px] left-[10px]' /></h4>
