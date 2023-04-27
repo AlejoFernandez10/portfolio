@@ -4,6 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   
+   
+  
   
 }
 

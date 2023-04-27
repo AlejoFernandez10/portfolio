@@ -1,6 +1,9 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+
+import { ChakraProvider, FormErrorMessage, useToast,FormControl, FormLabel, Input, Textarea, Button } from '@chakra-ui/react'
+
 import triangle from '../app/assets/triangle.webp'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {AiOutlineInstagram} from 'react-icons/ai'
@@ -12,19 +15,28 @@ import Context from '@/app/context/Context'
 
 import { useContext, useState } from 'react'
 
+import { sendForm } from '@/app/lib/sendFrom'
+
+
+
+
+
 
 const initValues = {name:"", email:"", msg:""}
 const initState = {values: initValues}
 
-import { sendForm } from '@/app/lib/sendFrom'
 
 function Contact() {
+
+  const toast = useToast()
 
   const [theme, setTheme] = useContext(Context)
 
   const [state, setState] = useState(initState)
 
-  const { values } = state
+  const [valueChange, setValueChange] = useState({})
+
+  const { values, isLoading } = state
 
 
   const handleChange = ({ target }) => setState((prev) => ({
@@ -35,12 +47,36 @@ function Contact() {
     },
   }))
 
+  const onBlur = ({target}) => setValueChange((prevState)=>({...prevState,
+    
+    [target.name]:true
+  }))
+
   const onSubmit = async () => {
+    setState((prev)=>({
+      ...prev,
+      isLoading:true
+    }))
+
     await sendForm(values)
+    setValueChange({})
+    setState(initState)
+    toast({
+      title: 'Message sent.',
+      description: "Thank you for contacting with me!",
+      status: 'success',
+      position:"top",
+      duration: 2500,
+      isClosable: true,
+    })
   }
 
 
+
+
   return (
+    <ChakraProvider>
+
     <section className={`min-h-[100vh] z-50 flex justify-center  w-full ${theme === 'dark' ? 'bg-[#1F1D2B]' : 'bg-gray-100'}  pt-20`} id='contact'>
 
 
@@ -53,19 +89,62 @@ function Contact() {
 
           <form action="post" className={'flex flex-col w-[90%] max-w-[400px] gap-2 mt-14 self-center'}>
 
-            <label htmlFor="name" className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'}  text-gray-200 font-medium `}>Name:</label>
+            <FormControl isInvalid={valueChange.name && !values.name}>
 
-            <input value={values.name} required onChange={handleChange} name='name' type="text" className={`${theme !== 'dark' ? 'bg-gray-300 text-gray-800' : 'bg-[#262737] text-gray-200'} min-h-[40px] rounded-md p-1 pl-2 `} />
+              <FormLabel htmlFor="name" className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'}  text-gray-200 font-medium `}>Name:</FormLabel>
 
-            <label htmlFor="mail" className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'} font-medium `}>Mail:</label>
+              <Input value={values.name} required onChange={handleChange} 
+              name='name'
+              errorBorderColor='red.300' 
+              onBlur={onBlur}
+              type="text"
+              border={'none'}
+              bg={`${theme !== 'dark' ? 'gray.300 ' : '#262737'}`} 
+              className={`${theme !== 'dark' ? ' text-gray-800' : ' text-gray-200'}  min-h-[40px] rounded-md p-1 pl-2 `} />
+              <FormErrorMessage>Required</FormErrorMessage>      
+            </FormControl>
 
-            <input value={values.email} required onChange={handleChange} name='email' type="mail" className={` ${theme !== 'dark' ? 'bg-gray-300 text-gray-800' : 'bg-[#262737] text-gray-200'} min-h-[40px] rounded-md p-1 pl-2 `} />
 
-            <label htmlFor="message" className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'} font-medium `}>Message:</label>
+            <FormControl isInvalid={valueChange.email && !values.email}>
 
-            <textarea value={values.msg} required onChange={handleChange} name="msg" id="" cols="30" rows="10" className={`${theme !== 'dark' ? 'bg-gray-300 text-gray-800' : 'bg-[#262737] text-gray-200'} rounded-md  p-1 pl-2`}></textarea>
+              <FormLabel htmlFor="mail" className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'} font-medium `}>Mail:</FormLabel>
 
-            <button type='submit' onClick={(e)=> e.preventDefault() &  onSubmit()} className={' text-base border-[1px] font-regular border-[#9333EA] bg-[#8222b9] py-[6px] px-9 mt-3 rounded-[5px] text-white transition-all duration-200 hover:opacity-80  lg:text-lg'}>Send</button>
+              <Input value={values.email} required onChange={handleChange} 
+              name='email'
+              errorBorderColor='red.300' 
+              onBlur={onBlur}
+              border={'none'}
+              type="mail"
+              bg={`${theme !== 'dark' ? 'gray.300 ' : '#262737'}`} 
+              className={` ${theme !== 'dark' ? ' text-gray-800' : 'text-gray-200'}   min-h-[40px] rounded-md p-1 pl-2 `} />
+              <FormErrorMessage>Required</FormErrorMessage>                              
+            
+            </FormControl>  
+
+            <FormControl isInvalid={valueChange.msg && !values.msg}>
+              <FormLabel htmlFor="message" className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'} font-medium `}>Message:</FormLabel>
+
+              <Textarea value={values.msg} required onChange={handleChange}
+               name="msg"
+               errorBorderColor='red.300'
+               onBlur={onBlur}
+               border={'none'}  
+               cols="30"
+               rows="10"
+               bg={`${theme !== 'dark' ? 'gray.300 ' : '#262737'}`}
+               className={`${theme !== 'dark' ? ' text-gray-800' : ' text-gray-200'} rounded-md  p-1 pl-2`}></Textarea>
+              
+              <FormErrorMessage>Required</FormErrorMessage>  
+            </FormControl>
+
+
+            <Button  onClick={(e)=> e.preventDefault() &  onSubmit() }
+             isLoading={isLoading}
+             bg={'#8222b9'}
+             _hover={'#8222b9'}
+             className={' text-base border-[1px] font-regular border-[#9333EA]  py-[6px] px-9 mt-3 rounded-[5px] text-white transition-all duration-200 hover:opacity-80  lg:text-lg'}>
+              Send
+            </Button>
           </form>
 
           <h6 className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-800'} text-xl font-medium text-left self-left mt-10 self-center`}>Social media: </h6>
@@ -85,6 +164,7 @@ function Contact() {
 
             </a>
           </div>
+          
         </div>
 
         <div className={'self-center mb-20'}>
@@ -95,6 +175,7 @@ function Contact() {
 
 
     </section>
+    </ChakraProvider>
   )
 }
 

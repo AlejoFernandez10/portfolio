@@ -15,6 +15,9 @@ import Context from '@/app/context/Context'
 
 import { useContext } from 'react'
 
+import cv from '../public/alejoFernandezcv.pdf'
+
+
 const AboutMe = () => {
 
   const [theme, setTheme] = useContext(Context)
@@ -39,7 +42,7 @@ const AboutMe = () => {
           <MyStudies />
 
           <div className={` mt-20 ${theme !== 'dark' ? 'text-[#262737]' : 'text-gray-200'}   text-lg mb-10`}>
-            <p className={' font-medium'}>Download my cv  <a href="#" className={'text-[#9333EA] font-semibold'}>here!</a> </p>
+            <p className={' font-medium'}>Download my cv  <a href={cv} download={true} className={'text-[#9333EA] font-semibold'} >here!</a> </p>
           </div>
 
       </div>
