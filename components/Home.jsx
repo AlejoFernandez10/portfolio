@@ -39,7 +39,7 @@ const Home = () => {
         
       
   
-  <div  className={"w-full max-w-[1000px] min-h-[95vh]  flex flex-col-reverse sm:flex-row-reverse place-content-center justify-center items-center z-40  p-4 "}>
+  <div  className={"w-full max-w-[1000px] min-h-[90vh] sm:min-h-[100vh]  flex flex-col-reverse sm:flex-row-reverse place-content-center justify-center items-center z-40  p-4 "}>
 
     {theme === 'dark' ?
       <Image width={1920} height={1080} src={ bg } priority alt="background" className={"w-[100%] min-h-[120vh] top-[-50px]  object-cover z-0  fixed"} />

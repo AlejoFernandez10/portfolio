@@ -77,7 +77,7 @@ function Contact() {
   return (
     <ChakraProvider>
 
-    <section className={` pb-14 z-50 flex justify-center  w-full ${theme === 'dark' ? 'bg-[#1F1D2B]' : 'bg-gray-100'}  pt-20`} id='contact'>
+    <section className={` pb-14 z-50 flex justify-center relative w-full ${theme === 'dark' ? 'bg-[#1F1D2B]' : 'bg-gray-100'}  pt-20`} id='contact'>
 
 
       <motion.div initial={{y:200}} whileInView={{y:0}} transition={{ duration: 0.5 }} viewport={{once:true}} className={'w-full max-w-[850px] relative flex flex-col items-center justify-between sm:flex-row'}>
