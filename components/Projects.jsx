@@ -83,7 +83,7 @@ const Projects = () => {
     }
   ]
 
-  const [theme, setTheme] = useContext(Context)
+  const [theme] = useContext(Context)
 
   return (
 
@@ -103,7 +103,7 @@ const Projects = () => {
         <h2 className={`${theme === 'dark' ? 'text-gray-50' : 'text-gray-900'} text-3xl text-start m-auto mt-[100px] mb-[60px] ml-3 lg:text-[40px] flex`}>Projects <Image width={30} height={15} alt='triangleDesign' src={triangle} className={' max-h-[30px] relative bottom-[-6px] left-[10px]'} /></h2>
         </div>
 
-        <motion.div  className={'w-[90%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '}>
+        <div  className={'w-[90%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '}>
 
         {data.map((project)=>(
 
@@ -119,10 +119,13 @@ const Projects = () => {
 
         <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign2} className={` w-[30%]  ${theme !== 'dark' ? 'opacity-30' : 'opacity-80'} absolute right-0 top-[40%]   z-0   `} />
         <Image width={500} height={250} alt='rectangle design' src={lightBoxDesign} className={` w-[22%] ${theme !== 'dark' ? 'opacity-30' : 'opacity-80'} absolute left-0 bottom-0   z-0   `} />
-        </motion.div>
+        </div>
 
       </div>
-          <a href="" className={`mb-20 mt-20 text-base border-[1px] font-regular border-[#9333EA] py-[8px] px-7 rounded-[5px] ${theme === 'dark' ? 'text-white' : 'text-gray-800'} transition-all duration-200 hover:bg-[#9333EA] `}>Contact me!</a>
+      <motion.div className='mb-20 mt-20' initial={{y:150}} whileInView={{y:0}} transition={{ duration: 0.5 }} viewport={{once:true}}>
+
+          <a href="#contact" className={` text-base border-[1px] font-regular border-[#9333EA] py-[8px] px-7 rounded-[5px] ${theme === 'dark' ? 'text-white' : 'text-gray-800'} transition-all duration-200 hover:bg-[#9333EA] `}>Contact me!</a>
+      </motion.div>
     </section>
   )
 }

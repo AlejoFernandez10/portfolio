@@ -13,7 +13,8 @@ const toggleTheme = () => {
 };
 
 return (
-  <div className={`relative h-6 w-12 text-white flex flex-col`} >
+  <div className={`relative h-6 w-12 text-white flex flex-col  `} >
+
     <label htmlFor="AcceptConditions" className="absolute h-6 w-12 cursor-pointer" >
       <input type="checkbox" id="AcceptConditions" className="peer sr-only" onClick={toggleTheme}  />
       <span className="absolute inset-0 w-full rounded-full bg-gray-500 transition peer-checked:bg-purple-500"></span>

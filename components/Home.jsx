@@ -48,10 +48,10 @@ const Home = () => {
     <Image width={1920} height={1080} src={ bgWhite } priority alt="background" className={"w-[100%] min-h-[120vh] top-[-50px]  object-cover lg:object-contain z-0  fixed"} />
     }
   
-    <motion.div   initial={{opacity:0}} animate={{opacity:1}}  transition={{duration:2, repeat:0}}    className={'relative flex justify-center items-center transition-all sm:pl-5'}>
+    <motion.div   initial={{y:-40}} animate={{y:0}}  transition={{duration:5 , repeat:Infinity}}    className={'relative flex justify-center items-center transition-all sm:pl-5'}>
 
     
-          <Image width={190} height={180} priority alt='Image from my LinkedIn profile' src={myPic} className={' w-auto  relative  rounded-full z-50  h-[150px] sm:mr-10 md:mr-20  mb-4 bottom-3 sm:h-[180px] sm:w-[200px] md:h-[230px] md:w-[250px]'} />
+          <Image width={190} height={180} priority alt='Small avatar of me' src={myPic} className={' w-auto  relative  rounded-full z-50  h-[150px] sm:mr-10 md:mr-20  mb-4 bottom-3 sm:h-[180px] sm:w-[200px] md:h-[230px] md:w-[250px]'} />
 
         
     </motion.div>

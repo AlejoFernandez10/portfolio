@@ -48,10 +48,10 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className={"flex flex-1 items-center justify-center sm:items-center sm:justify-between sm:px-[60px] sm:pr-[90px]"}>
-                <div className={"flex flex-shrink-0 items-center"}>
+              <div className={"flex flex-1 items-center sm:items-center sm:justify-between  sm:px-[20px] sm:pr-[90px]"}>
+                <div className={"flex flex-shrink-0 m-auto sm:m-0 items-center"}>
                   <Image width={250} height={120}
-                    className={"block   h-20 w-auto lg:hidden"}
+                    className={"block pl-10  h-20 w-auto lg:hidden"}
                     src={logo}
                     alt="Portfolio logo"
                   />
