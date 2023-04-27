@@ -76,11 +76,11 @@ const Projects = () => {
       <div className={'bg-[#9333EA] left-[-100px] top-[50%] blur-[80px] h-[120px] w-[120px] md:h-[150px] md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[130px] absolute xl:h-[300px] xl:w-[250px] xl:blur-[200px]'}></div>
       
       
-      <div className={'w-full max-w-[1200px] flex flex-col justify-center items-center'}>
+      <div className={'w-full max-w-[1200px] flex flex-col justify-center items-center z-10'}>
 
         <div className={'w-[90%] max-w-[850px] m-auto '}>
 
-        <h2 className={`${theme === 'dark' ? 'text-gray-50' : 'text-gray-900'} text-3xl text-start m-auto mt-[100px] mb-[60px] ml-3 lg:text-[40px] flex`}>Projects <Image width={30} height={15} alt='triangleDesign' src={triangle} className={' max-h-[30px] relative bottom-[-6px] left-[10px]'} /></h2>
+        <h2 className={`${theme === 'dark' ? 'text-gray-50' : 'text-gray-900'} text-3xl text-start m-auto mt-[100px] mb-[60px] ml-3 lg:text-[40px]  flex`}>Projects <Image width={30} height={15} alt='triangleDesign' src={triangle} className={' max-h-[30px] relative bottom-[-6px] left-[10px]'} /></h2>
         </div>
 
         <div  className={'w-[90%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '}>
