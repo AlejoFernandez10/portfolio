@@ -1,8 +1,8 @@
 import { mailOptions, transporter } from "@/app/config/nodemailer";
 
-export async function POST(request) {
-  const res = await request.json();
-  
+export async function POST(request){
+
+  const res = await request.json();  
 
   try{
 
