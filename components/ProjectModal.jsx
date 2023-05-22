@@ -18,7 +18,7 @@ import Link from 'next/link'
 
 
 
-const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, sliderImages}) => {
+const ProjectModal = ({title,  description, urlDeploy, urlRepo, state, sliderImages}) => {
 
   
   const [theme, setTheme] = useContext(Context)
@@ -95,7 +95,9 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
                           <SwiperSlide key={image}>
                             <Image
                               priority={true}
+                              blurDataURL={image.img}
                               placeholder='blur'
+                              
                               alt={description}
                               src={image.img}
                               width={1920}
