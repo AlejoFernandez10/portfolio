@@ -71,9 +71,9 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
                 
                 
              {theme === 'dark' ?  
-              <Image width={1920} height={1080} src={modalBG} className='w-full h-full absolute  bottom-0 object-cover z-0' />
+              <Image width={1920} height={1080} alt={description} src={modalBG} className='w-full h-full absolute  bottom-0 object-cover z-0' />
              :
-             <Image width={1920} height={1080} src={modalBGwhite} className='w-full h-full absolute bottom-0  object-cover z-0' />
+             <Image width={1920} height={1080} alt={description} src={modalBGwhite} className='w-full h-full absolute bottom-0  object-cover z-0' />
              }
                 <div className="w-full px-4 pb-4 pt-5 sm:p-6 sm:pb-4 z-10">
                   <div className="  w-full     sm:max-w-max">
