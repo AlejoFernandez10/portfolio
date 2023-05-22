@@ -95,9 +95,8 @@ const ProjectModal = ({title,  description, urlDeploy, urlRepo, state, sliderIma
                           <SwiperSlide key={image}>
                             <Image
                               priority={true}
-                              blurDataURL={image.img}
-                              placeholder='blur'
-                              
+                              blurDataURL={`${image.img}`}
+                              placeholder='blur'                              
                               alt={description}
                               src={image.img}
                               width={1920}
