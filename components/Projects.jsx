@@ -1,67 +1,28 @@
 'use client'
 
 import React from 'react'
-import lightBoxDesign from '../app/assets/lightBoxDesign.webp'
-import lightBoxDesign2 from '../app/assets/lightBoxDesign2.webp'
+import lightBoxDesign from '../public/assets/lightBoxDesign.webp'
+import lightBoxDesign2 from '../public/assets/lightBoxDesign2.webp'
 import Image from 'next/image'
-import twentydevBanner from '../app/assets/projects/twentydev.png'
-import restoAppBanner from '../app/assets/projects/restaurantapp.png'
-import ecommerceBanner from '../app/assets/projects/ecommerce.png'
-import gymSiteBanner from '../app/assets/projects/gymSite.png'
-import coffeeShopBanner from '../app/assets/projects/coffee-shop.png'
+
 import ProjectCardReverse from './ProjectCardReverse'
 import ProjectCard from './ProjectCard'
-import triangle from '../app/assets/triangle.webp'
+import triangle from '../public/assets/triangle.webp'
 import { motion } from 'framer-motion'
 import Context from '@/app/context/Context'
 
 import { useContext } from 'react'
 
+import data from '@/data.json'
 
 
 
-const Projects = () => {
+const Projects =  () => {
 
-  const data = [
-    {
-      title:"TwentyDev",
-      img:twentydevBanner,
-      description:"TwentyDev is my personal brand. It has the objective of selling web templates and websites developed by me.    I like to think about it as a win-win, because if i don’t sell any website or template, i would still be gaining experience by creating solid projects.  ",
-      urlRepo:'https://github.com/AlejoFernandez10/twentydev2.0',
-      urlDeploy:'https://twentydev.com/',      
-         
-    },
-    {
-      title:"YourResto",
-      img:restoAppBanner,
-      description:"This is a restaurant app. I developed it with the objective of learning Next JS. Users can filter and navigate  through a variety of products, see their details ,add them to cart, and see the status once they buy it. It will soonly have in-app notifications.",
-      urlRepo:'https://github.com/AlejoFernandez10/RestaurantApp',
-      urlDeploy:'https://restaurant-app-six-sigma.vercel.app/',
-      reverse:true    
-    },
-    {
-      title:"E-commerce",
-      img:ecommerceBanner,
-      description:"This is an E-commerce store. Users can navigate through the different products in the store and have the option to add them to their cart. It is also possible to create an account and log in. If the user is logged in, they can access a section that will detail their purchase history in the store. ",
-      urlRepo:'https://github.com/AlejoFernandez10/e-commerceTemplate',
-      urlDeploy:'https://e-commerce-template-seven.vercel.app/',  
-    },
-    {
-      title:"Gym Site",
-      img:gymSiteBanner,
-      description:"This is a gym Website. The gym's available activities are displayed along with the dates of the classes for those activities. It has a section for Plans or Memberships which the user can add to their cart. ",
-      urlRepo:'https://github.com/AlejoFernandez10/Gym-template',
-      urlDeploy:'https://gymtemplate.vercel.app/',
-      reverse:true       
-    },
-    {
-      title:"Coffee-shop",
-      img:coffeeShopBanner,
-      description:`This is a coffe-shop application . The user can create their custom order and add it to the cart. Different 'Precreated' kits can also be viewed and added to the cart. Form functional using php`,
-      urlRepo:'https://github.com/AlejoFernandez10/coffeeShopTemplate',
-      urlDeploy:'https://coffee-shop-template.vercel.app/',   
-    }
-  ]
+  
+
+ 
+    
 
   const [theme] = useContext(Context)
 
@@ -78,21 +39,26 @@ const Projects = () => {
       
       <div className={'w-full max-w-[1200px] flex flex-col justify-center items-center z-10'}>
 
-        <div className={'w-[90%] max-w-[850px] m-auto '}>
+        <div className={'w-full max-w-[350px] md:max-w-[800px] md:pl-3  lg:max-w-[900px]  '}>
 
         <h2 className={`${theme === 'dark' ? 'text-gray-50' : 'text-gray-900'} text-3xl text-start m-auto mt-[100px] mb-[60px] ml-3 lg:text-[40px]  flex`}>Projects <Image width={30} height={15} alt='triangleDesign' src={triangle} className={' max-h-[30px] relative bottom-[-6px] left-[10px]'} /></h2>
         </div>
 
-        <div  className={'w-[90%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '}>
+        <div  className={'w-[95%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '}>
 
         {data.map((project)=>(
 
-        (project.reverse ?
+        project.reverse ?(
+          <ProjectCardReverse key={project.title} title={project.title} description={project.description} img={project.img} urlDeploy={project.urlDeploy} urlRepo={project.urlRepo}  sliderImages={project.sliderImages} />
 
-         <ProjectCardReverse key={project.title} title={project.title} description={project.description} img={project.img} urlDeploy={project.urlDeploy} urlRepo={project.urlRepo}  />
-          :
-          <ProjectCard key={project.title} title={project.title} description={project.description} img={project.img}  urlDeploy={project.urlDeploy} urlRepo={project.urlRepo} />
         )
+
+          :
+          (
+
+            <ProjectCard key={project.title} title={project.title} description={project.description} img={project.img}  urlDeploy={project.urlDeploy} urlRepo={project.urlRepo} sliderImages={project.sliderImages} />
+          )
+        
           
 
         ))}

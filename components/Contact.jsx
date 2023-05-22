@@ -4,18 +4,18 @@ import Image from 'next/image'
 
 import { ChakraProvider, FormErrorMessage, useToast,FormControl, FormLabel, Input, Textarea, Button} from '@chakra-ui/react'
 
-import triangle from '../app/assets/triangle.webp'
+import triangle from '../public/assets/triangle.webp'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {AiOutlineInstagram} from 'react-icons/ai'
 import {AiFillGithub} from 'react-icons/ai'
 
-import avatar from '../app/assets/fullbodyAvatar.webp'
+import avatar from '../public/assets/fullbodyAvatar.webp'
 
 import Context from '@/app/context/Context'
 
 import { useContext, useState } from 'react'
 
-import { sendForm } from '@/app/lib/sendFrom'
+import { sendForm } from '@/lib/sendFrom'
 
 
 import { motion } from 'framer-motion'

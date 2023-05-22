@@ -2,7 +2,7 @@
 import React from 'react'
 import {BsDot} from 'react-icons/bs'
 import Image from 'next/image'
-import triangle from '../app/assets/triangle.webp'
+import triangle from '../public/assets/triangle.webp'
 import Context from '@/app/context/Context'
 
 import { useContext } from 'react'
@@ -11,6 +11,25 @@ const MyStudies = () => {
 
   const [theme, setTheme] = useContext(Context)
 
+
+   const coderHouseCourses = [
+    'Front end Web Developer with React',
+    'React Js',
+    'Javascript',
+    'Web development with HTML',
+   ]
+
+   const educacionITCourses = [
+    'Javascript Advanced Developer',
+    'Bootstrap',
+    'Sass & Less',
+    'Object Paradigm introduction',
+    'Javascript from Scratch',
+    'Web layout with html & css',
+    'Introduction to UX',
+    'Web development with html ',
+    
+   ]
 
   return (
     <>
@@ -25,10 +44,11 @@ const MyStudies = () => {
                   </span>
 
                   <ul className={'border-l-[2px] border-[#9333EA] mt-5 pl-1.5 flex flex-col gap-2  '}>
-                    <li className={`flex whitespace-nowrap items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm  md:text-[15px]`}><BsDot className={'text-lg'} />  Front end Web Developer with React</li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/>  React Js</li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Javascript </li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Web development </li>
+
+                    {coderHouseCourses.map((course)=>(
+                       <li key={course} className={`flex whitespace-nowrap items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm  md:text-[15px]`}><BsDot className={'text-lg'} /> {course} </li> 
+                    ))}
+                    
                     
                   </ul>          
               </div>
@@ -38,14 +58,14 @@ const MyStudies = () => {
                     Educacion IT
                   </span>
                   <ul className={'border-l-[2px] border-[#9333EA] mt-5 pl-1.5 flex flex-col gap-2 '} >
-                    <li className={`flex whitespace-nowrap items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm  md:text-[15px]`}><BsDot className={'text-lg'} /> Javascript Advanced Developer</li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Bootstrap </li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/>  Sass & Less</li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Object Paradigm introduction </li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Javascript from Scratch</li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Web layout with html & css </li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Introduction to UX </li>
-                    <li className={`flex items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm md:text-[15px]`}><BsDot  className={'text-lg'}/> Web development with html </li>
+
+                      {educacionITCourses.map((course)=>(
+
+                        <li key={course} className={`flex whitespace-nowrap items-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} text-sm  md:text-[15px]`}><BsDot className={'text-lg'} /> {course}</li>
+
+                      ))}
+
+                    
                   </ul>   
               </div>
 

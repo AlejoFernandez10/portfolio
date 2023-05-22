@@ -4,7 +4,11 @@ const nextConfig = {
     appDir: true,
   },
   
-  webpack: (config, options) => {
+  webpack: (config) => {
+    config.experiments = {
+      ...config.experiments,
+      topLevelAwait: true,
+  },
     config.module.rules.push({
       test: /\.(pdf)$/,
       use: [

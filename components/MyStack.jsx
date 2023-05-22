@@ -33,7 +33,7 @@ const MyStack = () => {
 </div>
 
 <div className={'flex flex-col justify-center '}>
-  <SiNextdotjs className={'text-[35px]  ml-1 mb-1.5 lg:text-[45px]'}/>
+  <SiNextdotjs className={`text-[35px] ${theme === 'dark' ? 'text-gray-100' : 'text-gray-800'}  ml-0.5 mb-1.5 lg:text-[45px]`}/>
   <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} text-sm`}>Next Js</span>
 </div>
 
