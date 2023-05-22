@@ -66,7 +66,7 @@ const Home = () => {
   
       <motion.div className={'pt-8'} initial={{opacity:0}} animate={{opacity:1}}  transition={{duration:1.5}}>
         <a href='#projects' className={" text-sm border-[1px] font-regular border-[#9333EA] bg-[#9333EA] py-[9px] px-9 mr-3 rounded-[5px]  text-white transition-all duration-200 hover:opacity-80 sm:text-base lg:text-lg"}>Projects</a>
-        <a href='#contact' className={` text-sm border-[1px] font-regular border-[#9333EA] py-[9px] px-6 rounded-[5px]  ${theme !== 'dark' ? 'text-gray-800': 'text-[#fff]'} transition-all duration-200 hover:bg-[#9333EA] hover:text-white  sm:text-base lg:text-lg`}>Lets connect</a>
+        <a href='#contact' className={` text-sm border-[1px] font-regular border-[#9333EA] py-[9px] px-6 rounded-[5px]  ${theme !== 'dark' ? 'text-gray-800': 'text-[#fff]'} transition-all duration-200 hover:bg-[#9333EA] hover:text-white  sm:text-base lg:text-lg`}>Contact me!</a>
       </motion.div>
     </motion.div>
   
