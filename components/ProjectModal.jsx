@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 import modalBG from '@/public/Sprinkle.svg'
 import modalBGwhite from '@/public/Sprinklewhite.svg'
 import Link from 'next/link'
-import SuspenseFallback from './SuspenseFallback'
+
 
 
 const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, sliderImages}) => {
@@ -83,7 +83,7 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
 
                     
 
-                    <Suspense fallback={<SuspenseFallback />}>
+                   
                       <Swiper
                         modules={[Pagination]}
                         centeredSlides={true}
@@ -94,7 +94,8 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
                         {sliderImages?.map((image) => (
                           <SwiperSlide key={image}>
                             <Image
-                              priority
+                              priority={true}
+                              placeholder='blur'
                               alt={description}
                               src={image.img}
                               width={1920}
@@ -104,7 +105,7 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
                           </SwiperSlide>
                         ))}
                       </Swiper>
-                    </Suspense>
+                    
                         
 
 
