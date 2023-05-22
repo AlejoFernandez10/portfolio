@@ -37,13 +37,13 @@ const ProjectCardReverse = ({title, img,  description, urlDeploy, urlRepo,slider
 
     <div  className={'m-auto pb-5 w-full'} >
 
-    <button onClick={()=> checkModalState()} target='_blank'>
+    <button onClick={()=> checkModalState()} className='w-full' >
 
       <Image width={1920} height={1080} alt={description} src={img} className={'w-full min-w-[300px] lg:min-w-[370px]  hover:scale-105 transition-all duration-200 hover:shadow-2xl'} />
 
 
-      <ProjectModal state={open} img={img} description={description} urlDeploy={urlDeploy} title={title} urlRepo={urlRepo} sliderImages={sliderImages}/>
     </button>
+      <ProjectModal state={open} img={img} description={description} urlDeploy={urlDeploy} title={title} urlRepo={urlRepo} sliderImages={sliderImages}/>
     </div>
 
     <div>
