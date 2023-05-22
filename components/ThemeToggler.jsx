@@ -24,7 +24,7 @@ const ThemeToggler = () => {
         setTheme(localTheme);
       }
     }
-  }, []);
+  }, [setTheme]);
 
   return (
     <div className={`relative h-6 w-12 text-white flex flex-col`}>

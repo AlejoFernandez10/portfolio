@@ -96,7 +96,7 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
 
                           {sliderImages?.map((image)=>(
 
-                          <SwiperSlide> 
+                          <SwiperSlide key={image}> 
                             <Image
                                    alt={description}
                                    src={image.img}  
