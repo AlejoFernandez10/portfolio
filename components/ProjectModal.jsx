@@ -83,40 +83,29 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
 
                     
 
-                    <Swiper  
-                         
-      
-                         modules={[ Pagination]}
-
-                         centeredSlides={true}
-                         
-                         loop={true}
-                         pagination={{ clickable: true}}
-                         className=' h-[100%]     max-w-[99%]  m-auto  p-0'
-                             >
-
-                          {sliderImages?.map((image)=>(
-                           
-                            
-                            <SwiperSlide key={image} >
-                              <Suspense  fallback={<SuspenseFallback />}>
-                                
-                             <Image
-                                   alt={description}
-                                   src={image.img}  
-                                   width={1920} height={1080} className={'w-full object-contain rounded-lg  lg:min-w-[370px]   transition-all duration-200 hover:shadow-xl'}             
-                                 /> 
-                           </Suspense>
-                         </SwiperSlide>
-                          )) }    
-
-
-
-                           
-
-                              
-                            
-                    </Swiper>
+                    <Suspense fallback={<SuspenseFallback />}>
+                      <Swiper
+                        modules={[Pagination]}
+                        centeredSlides={true}
+                        loop={true}
+                        pagination={{ clickable: true }}
+                        className='h-[100%] max-w-[99%] m-auto p-0'
+                      >
+                        {sliderImages?.map((image) => (
+                          <SwiperSlide key={image}>
+                            <Image
+                              priority
+                              alt={description}
+                              src={image.img}
+                              width={1920}
+                              height={1080}
+                              className='w-full object-contain rounded-lg lg:min-w-[370px] transition-all duration-200 hover:shadow-xl'
+                            />
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                    </Suspense>
+                        
 
 
 
