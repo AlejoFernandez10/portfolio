@@ -81,7 +81,7 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
                     <div id='slider-container' className="mx-auto flex flex-col    rounded-[10%]  items-center justify-center   " >
 
 
-                    <SuspenseFallback />
+                    
 
                     <Swiper  
                          
