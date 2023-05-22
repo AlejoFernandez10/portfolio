@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState, useEffect, Fragment, useRef, useContext} from 'react'
+import React, {useState, useEffect, Fragment, useRef, useContext, Suspense} from 'react'
 import Image from 'next/image'
 import { Dialog, Transition } from '@headlessui/react'
 
@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 import modalBG from '@/public/Sprinkle.svg'
 import modalBGwhite from '@/public/Sprinklewhite.svg'
 import Link from 'next/link'
+import SuspenseFallback from './SuspenseFallback'
 
 
 const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, sliderImages}) => {
@@ -95,14 +96,17 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
                              >
 
                           {sliderImages?.map((image)=>(
+                           
+                           <Suspense key={image} fallback={<SuspenseFallback /> }>
 
-                          <SwiperSlide key={image}> 
+                          <SwiperSlide > 
                             <Image
                                    alt={description}
                                    src={image.img}  
                                    width={1920} height={1080} className={'w-full object-contain rounded-lg  lg:min-w-[370px]   transition-all duration-200 hover:shadow-xl'}             
                                  />
                          </SwiperSlide>
+                           </Suspense>
                           )) }    
 
 
