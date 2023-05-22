@@ -81,7 +81,7 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
                     <div id='slider-container' className="mx-auto flex flex-col    rounded-[10%]  items-center justify-center   " >
 
 
-                  
+                    <SuspenseFallback />
 
                     <Swiper  
                          
@@ -97,16 +97,17 @@ const ProjectModal = ({title, img, description, urlDeploy, urlRepo, state, slide
 
                           {sliderImages?.map((image)=>(
                            
-                           <Suspense key={image} fallback={<SuspenseFallback /> }>
-
-                          <SwiperSlide > 
-                            <Image
+                            
+                            <SwiperSlide key={image} >
+                              <Suspense  fallback={<SuspenseFallback />}>
+                                
+                             <Image
                                    alt={description}
                                    src={image.img}  
                                    width={1920} height={1080} className={'w-full object-contain rounded-lg  lg:min-w-[370px]   transition-all duration-200 hover:shadow-xl'}             
-                                 />
-                         </SwiperSlide>
+                                 /> 
                            </Suspense>
+                         </SwiperSlide>
                           )) }    
 
 
