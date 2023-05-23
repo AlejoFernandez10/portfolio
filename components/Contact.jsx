@@ -53,22 +53,34 @@ function Contact() {
   }))
 
   const onSubmit = async () => {
-    setState((prev)=>({
-      ...prev,
-      isLoading:true
-    }))
-
-    await sendForm(values)
-    setValueChange({})
-    setState(initState)
-    toast({
-      title: 'Message sent.',
-      description: "Thank you for contacting with me!",
-      status: 'success',
-      position:"top",
-      duration: 2500,
-      isClosable: true,
-    })
+    
+    if(values.name !== '' || values.email !== '' || values.msg !== ''){
+      setState((prev)=>({
+        ...prev,
+        isLoading:true
+      }))
+      await sendForm(values)
+      setValueChange({})
+      setState(initState)
+      toast({
+        title: 'Message sent.',
+        description: "Thank you for contacting with me!",
+        status: 'success',
+        position:"top",
+        duration: 2500,
+        isClosable: true,
+      })
+      
+    }else{
+      
+      toast({
+        title:'Fields missing!',
+        description:'Fulfill every field if you want to send the message please',
+        status:'error',
+        duration:'4500',
+        isClosable:true
+      })
+    }
   }
 
 
