@@ -75,7 +75,7 @@ function Contact() {
       
       toast({
         title:'Fields missing!',
-        description:'Fulfill every field if you want to send the message please',
+        description:'Complete every field if you want to send the message please',
         status:'error',
         duration:'4500',
         isClosable:true
