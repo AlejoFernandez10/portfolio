@@ -54,7 +54,16 @@ function Contact() {
 
   const onSubmit = async () => {
     
-    if(values.name !== '' || values.email !== '' || values.msg !== ''){
+    if(values.name === '' || values.email === '' || values.msg === ''){
+     
+      toast({
+        title:'Fields missing!',
+        description:'Complete every field if you want to send the message please',
+        status:'error',
+        duration:'4500',
+        isClosable:true
+      })
+    }else{
       setState((prev)=>({
         ...prev,
         isLoading:true
@@ -71,15 +80,7 @@ function Contact() {
         isClosable: true,
       })
       
-    }else{
       
-      toast({
-        title:'Fields missing!',
-        description:'Complete every field if you want to send the message please',
-        status:'error',
-        duration:'4500',
-        isClosable:true
-      })
     }
   }
 
