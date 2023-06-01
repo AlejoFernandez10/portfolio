@@ -45,7 +45,7 @@ const MoreProjects = () => {
 
 
             <div className='w-full flex justify-between items-center pt-2'>
-              <h6 className='text-white text-lg font-semibold py-2'>{project.title}</h6>
+              <h6 className={`${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-lg font-semibold py-2`}>{project.title}</h6>
 
               <div className='flex gap-2'>
               <a href={project.urlRepo} target='_blank' className={'flex flex-col text-xs text-[#9333EA]'}><AiOutlineGithub  className={'text-[24px] cursor-pointer  hover:opacity-80'}/></a>
@@ -53,13 +53,13 @@ const MoreProjects = () => {
               </div>  
 
             </div>
-            <p className='text-gray-300 text-xs md:text-sm'>{project.description.length > length ? `${project.description.slice(0,length)}...` : project.description} </p>
+            <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'} text-xs md:text-sm`}>{project.description.length > length ? `${project.description.slice(0,length)}...` : project.description} </p>
             {project.description.length > length ? <button onClick={()=> setLength(381)} className='text-purple-500  pt-2  rounded-md font-semibold self-start text-sm md:text-base'>Show more</button> : null}
             {project.description.length === length  ? <button onClick={()=> setLength(220) } className='text-purple-500  pt-2   rounded-md font-semibold self-start text-sm md:text-base'>Show less</button> : null} 
             
             
-            <div className='flex justify-between items-center w-full pt-4 px-1'>
-              <span className='text-white text-sm '>Techs used: </span>
+            <div className='flex justify-between items-center w-full pt-4 '>
+              <span className={`${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-sm `}>Techs used: </span>
 
               <div className='flex gap-2'>
                 <SiNextdotjs className={'text-[27px] text-gray-500'} />
