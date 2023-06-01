@@ -46,7 +46,7 @@ const Projects =  () => {
 
         <div  className={'w-[95%] max-w-[1000px] flex flex-col  gap-20 items-center justify-center '}>
 
-        {data.map((project)=>(
+        {data.slice(0,5).map((project)=>(
 
         project.reverse ?(
           <ProjectCardReverse key={project.title} title={project.title} description={project.description} img={project.img} urlDeploy={project.urlDeploy} urlRepo={project.urlRepo}  sliderImages={project.sliderImages} />

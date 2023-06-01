@@ -6,6 +6,7 @@ import Projects from "@/components/Projects"
 
 import AboutMe from "@/components/AboutMe"
 import Contact from "@/components/Contact"
+import MoreProjects from "@/components/MoreProjects"
 
 
 
@@ -24,6 +25,8 @@ export default function Page() {
      <Home />
 
      <Projects  />
+
+     <MoreProjects />
 
      <AboutMe  />
 

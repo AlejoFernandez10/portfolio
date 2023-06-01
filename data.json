@@ -120,5 +120,28 @@
         "img":"/sliders/coffe-shop/img-5.webp"
       }
     ]        
-  }
+  },
+
+  {
+    "title":"Super Todo List",
+    "img":"/projects/todo-list.webp",
+    "description":"This is a work in progress. It has a simple daskboard where user can select a day with no specific date to organize that day in particular, select a date in specific from a modal that contains a calendar, set a priority to indicate which tasks are more or less important, create as much tasks as the user requires that are attached to the day or date selected, edit & delete tasks ",
+    "urlDeploy":"https://to-do-list-1-0.vercel.app/",
+    "urlRepo":"https://github.com/AlejoFernandez10/ToDoList"
+    },
+  {
+    "title":"Joke Generator",
+    "img":"/projects/joke-generator.webp",
+    "description":"By simply pressing a button user can generate a random joke, and add them to favorites if they like it, to not lose them when they generate another joke.",
+    "urlDeploy":"https://joke-generator-silk.vercel.app/",
+    "urlRepo":"https://github.com/AlejoFernandez10/jokeGenerator"
+    },
+  {
+    "title":"BMI calculator",
+    "img":"/projects/bmi-calculator.webp",
+    "description":"This app has the objective of giving the user and idea of their health in terms of weight, once the user fills the inputs with the necessary info. they can calculate their BMI thanks to a simple formula.",
+    "urlDeploy":"https://bm-icalculator.vercel.app/",
+    "urlRepo":"https://github.com/AlejoFernandez10/BMIcalculator"
+    }
 ]
+
